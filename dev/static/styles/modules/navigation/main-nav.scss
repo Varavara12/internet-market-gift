@@ -1,0 +1,25 @@
+.main-nav{
+  &__list{
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  &__item{
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link{
+    border-bottom: 2px solid transparent;
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+    color: $tundora;
+    line-height: 1.88;
+    font-weight: 600;
+    &:hover{
+      border-bottom: 2px solid coral;
+    }
+  }
+}

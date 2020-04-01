@@ -1,0 +1,22 @@
+.header__main
+    .container
+        .header__content
+            .header__logo.logo
+                img(src="static/images/general/logo.png" alt="логотип").logo__img
+            .header__phones
+                .header__item
+                    a(href="tel: +380635792739").header__phone +38 (063) 57-927-39
+                    span.header__link Заказать звонок
+                .header__item
+                    a(href="tel: +380635792739").header__phone +38 (063) 57-927-39
+                    span.header__description Звонок бесплатный
+            .header__address.header-address
+                +icon('location', 'header-address__icon')
+                span.header-address__text г. Харьков
+            .header__shop
+                .header-goods
+                    span.header-goods__price 0 &#8372
+                    span.header-goods__count 0 товаров
+                .header-basket
+                    +icon('basket', 'header-basket__icon')
+                    span.header-basket__text Корзина
