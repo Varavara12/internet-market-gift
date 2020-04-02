@@ -2,9 +2,7 @@ nav.header__main-nav.main-nav
     ul.main-nav__list
         li.main-nav__item
             a(href="").main-nav__link Самокаты
-            ul.main-nav-dropdown__list
-                li.main-nav-dropdown__item
-                    a(href="").main-nav-dropdown__link Взрослые самокаты
+            include main-nav-dropdown
         li.main-nav__item
             a(href="").main-nav__link Беговелы
         li.main-nav__item
@@ -13,9 +11,11 @@ nav.header__main-nav.main-nav
             a(href="").main-nav__link Ролики
         li.main-nav__item
             a(href="").main-nav__link Скейты
+            include main-nav-dropdown-1
         li.main-nav__item
             a(href="").main-nav__link Батуты
         li.main-nav__item
             a(href="").main-nav__link Аксессуары и запчасти
         li.main-nav__item
             a(href="").main-nav__link Еще
+                +icon('down', 'main-nav__icon')
