@@ -26,15 +26,51 @@ $(document).ready(function () {
         })
     };
 
+    let closeSearchForm = () =>{
+        $(document).on('click', function (e){
+		let div = $(".search--open");
+		if (!div.is(e.target)
+		    && div.has(e.target).length === 0) {
+			div.removeClass('search--open');
+		}
+	});
+    };
+
     let clearSearchForm = () => {
        $(document).on('click', '.search__clear', function () {
             $('.search__input').val('');
         })
     };
 
+    let bannerSlider = () => {
+        $('.js-banner').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '.banner__navigation--next',
+            nextArrow: '.banner__navigation--prev',
+            dots: true,
+            customPaging: function (slider, i) {
+                return '<a class="banner__dots" /></a>';
+            },
+            appendDots: '.banner__dot'
+        })
+    };
+
+    let tabs = function () {
+        $('.tabs-navigation__item').on('click', function () {
+             let tabName = $(this).attr('show-tab');
+            $(this).addClass('tabs-navigation__item--active').siblings()
+                .removeClass('tabs-navigation__item--active');
+            $('.tabs__body .' + tabName).addClass('tab--active').siblings().removeClass('tab--active')
+        })
+    };
+
     openSearchForm();
+    closeSearchForm();
     mainSubnavHover();
     clearSearchForm();
+    bannerSlider();
+    tabs();
 });
 
 

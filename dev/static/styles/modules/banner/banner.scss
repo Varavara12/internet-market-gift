@@ -1,0 +1,104 @@
+.s-banner{
+  padding-bottom: 0;
+}
+.banner{
+  background-image: linear-gradient(255deg, #ffb800, #ff6d00);
+  height: 300px;
+  padding: 0 90px;
+  position: relative;
+  border-radius: 4px;
+  &__item{
+    outline: none;
+  }
+  &__navigation {
+    @include size(50px);
+    background-color: rgba(#ffffff, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transition: all linear .3s;
+    &.banner__navigation{
+      &--prev{
+        left: 30px;
+      }
+      &--next{
+        right: 30px;
+      }
+    }
+    &:hover{
+      background-color: rgba(#ffffff, .5);
+      .banner__navigation-icon{
+        fill: rgba($black, .8);
+        transition: all linear .3s;
+      }
+    }
+    &-icon{
+      fill: rgba($black, .5);
+      height: 17px;
+      width: 10px;
+    }
+  }
+  &__content{
+    display: flex;
+    padding: 30px 0;
+  }
+  &__body{
+    color: #fff;
+    flex: 1;
+  }
+  &__title{
+    display: block;
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  &__descr{
+    display: block;
+    font-size: 18px;
+    line-height: 1.67;
+    margin-bottom: 40px;
+  }
+  &__img{
+    max-width: 100%;
+    max-height: 240px;
+    &-wrapper{
+      flex: 0 0 40%;
+      text-align: center;
+      width: 40%;
+    }
+  }
+  &__dots{
+    @include size(8px);
+    border-radius: 50%;
+    background-color: rgba(38, 38, 38, 0.3);
+    display: block;
+    cursor: pointer;
+  }
+  &__dot{
+    bottom: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    .slick-dots{
+      align-items: center;
+      display: flex;
+      li{
+        margin-right: 10px;
+        &:last-child{
+          margin-right: 0;
+        }
+        &.slick-active{
+          .banner__dots{
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

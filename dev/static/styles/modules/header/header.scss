@@ -73,10 +73,12 @@
     font-size: 12px;
     line-height: 1.67;
     text-decoration: underline;
+    cursor: pointer;
   }
   &__description{
     color: $silver-chalice;
     display: block;
+    cursor: pointer;
     font-size: 12px;
     line-height: 1.67;
     text-decoration: underline;
